@@ -2,7 +2,10 @@
 
     angular.module("bookLibrary",
         ["ngRoute",
-        "bookLibrary.controllers"
+        "ngTouch",
+        "bookLibrary.controllers",
+        "bookLibrary.directive",
+        "bookLibrary.factories"
         ]);
 }
-)();
+)()

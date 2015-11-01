@@ -3,20 +3,31 @@
 <head>
     <title></title>
 	<meta charset="utf-8" />
-    <script src="/Scripts/angular.js"></script>
-    <script src="/Scripts/angular-route.js"></script>
-    <script src="/app/controllers/app.controllers.js"></script>
-    <script src="/app/app.module.js"></script>
-    <script src="/app/app.routes.js"></script>
-    <script src="/app/controllers/mainController.js"></script>
-    <script src="/app/controllers/registeController.js"></script>
+    
+    <link href="/Content/bootstrap.css" rel="stylesheet" />
+    <link href="/Content/bootstrap-theme.min.css" rel="stylesheet" />
+    <link href="/Content/site.css" rel="stylesheet" />
 
 
 </head>
 <body>
     
 
-    <div ng-view></div>
+    <div class="jumbotron container" ng-view></div>
 
+
+    <script src="/Scripts/angular.js"></script>
+    <script src="/Scripts/angular-route.js"></script>
+    <script src="/Scripts/angular-touch.js"></script>
+    <script src="/app/controllers/app.controllers.js"></script>
+    <script src="/app/directivies/app.directive.js"></script>
+    <script src="/app/factories/app.factories.js"></script>
+    <script src="/app/factories/datafactory.js"></script>
+    <script src="/app/app.module.js"></script>
+    <script src="/app/app.routes.js"></script>
+    <script src="/app/controllers/mainController.js"></script>
+    <script src="/app/controllers/registeController.js"></script>
+    <script src="/app/directivies/showerror.js"></script>
+    <script src="/app/directivies/angucomplete.js"></script>
 </body>
 </html>

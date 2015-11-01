@@ -10,6 +10,6 @@
     	controller: 'registerController'
     }).
     otherwise({
-    	redirectTo: '/main'
+    	redirectTo: '/register'
     });
 }])
