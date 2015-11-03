@@ -29,6 +29,7 @@ namespace BookLibrary.DAL
         public virtual DbSet<Book> Books { get; set; }
         public virtual DbSet<City> Cities { get; set; }
         public virtual DbSet<Genre> Genres { get; set; }
+        public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
         public virtual DbSet<User_Books> User_Books { get; set; }
         public virtual DbSet<User> Users { get; set; }
     }

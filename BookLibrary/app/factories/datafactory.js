@@ -2,13 +2,15 @@
 
     function DataFactory($http, $q) {
 
+        var currentUser = null;
+
         return {
-            addUser: function (user) {e
+            addUser: function (user) {
                 var deferred = $q.defer();
 
 
                 $http.post('http://localhost:49579/api/User/AddUser', user, { headers: { 'Content-Type': 'application/json' } }).success(function (data) {
-                   
+
                     deferred.resolve(data);
                 }).error(deferred.resolve);
 
@@ -22,7 +24,26 @@
                 }).error(deferred.resolve);
 
                 return deferred.promise;
+            },
+            Login: function (UserName, Password) {
+                var deferred = $q.defer();
+
+                $http({
+                    url: "http://localhost:49579/api/User/Login/" + UserName + "/" + Password,
+                    method: "POST",
+                    headers: { 'Content-Type': 'application/json' }
+                }).success(function (data) {
+
+                    currentUser = data;
+                    deferred.resolve(data);
+                }).error(deferred.resolve);
+
+                return deferred.promise;
+            },
+            getCurrentUser: function () {
+                return currentUser;
             }
+
         }
     };
 

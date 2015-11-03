@@ -39,5 +39,12 @@ namespace BookLibrary
             return Ok(CityProvider.GetCities());
         }
 
+        [Route("api/User/Login/{UserName}/{Password}")]
+        [HttpPost]
+        public IHttpActionResult Login(string UserName, string Password)
+        {
+            return Ok(UserProvider.Login(UserName, Password));
+        }
+
     }
 }

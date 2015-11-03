@@ -2,6 +2,7 @@
 /// <reference path="../app/app.module.js" />
 /// <reference path="../app/app.routes.js" />
 /// <reference path="../app/controllers/app.controllers.js" />
+/// <reference path="../app/controllers/logincontroller.js" />
 /// <reference path="../app/controllers/mainController.js" />
 /// <reference path="../app/controllers/registeController.js" />
 /// <reference path="../app/directivies/angucomplete.js" />

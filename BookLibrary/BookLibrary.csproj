@@ -93,20 +93,22 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="app\controllers\loginController.js" />
     <Content Include="app\directivies\angucomplete.js" />
     <Content Include="app\directivies\app.directive.js" />
     <Content Include="app\directivies\showerror.js" />
     <Content Include="app\factories\datafactory.js" />
+    <Content Include="app\views\login.html" />
     <Content Include="Content\site.css" />
-    <Content Include="DAL\Library.Context.tt">
+    <Content Include="DAL\LibraryContext.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Library.edmx</DependentUpon>
-      <LastGenOutput>Library.Context.cs</LastGenOutput>
+      <DependentUpon>LibraryContext.edmx</DependentUpon>
+      <LastGenOutput>LibraryContext.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="DAL\Library.tt">
+    <Content Include="DAL\LibraryContext.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Library.edmx</DependentUpon>
-      <LastGenOutput>Library.cs</LastGenOutput>
+      <DependentUpon>LibraryContext.edmx</DependentUpon>
+      <LastGenOutput>LibraryContext.cs</LastGenOutput>
     </Content>
     <Content Include="Global.asax" />
     <Content Include="packages.config" />
@@ -115,14 +117,14 @@
     <Content Include="Scripts\jquery-1.9.1.min.map" />
     <Content Include="app\controllers\app.controllers.js" />
     <Content Include="app\factories\app.factories.js" />
-    <EntityDeploy Include="DAL\Library.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Library.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <Content Include="DAL\Library.edmx.diagram">
-      <DependentUpon>Library.edmx</DependentUpon>
-    </Content>
     <Content Include="Scripts\angular-touch.min.js.map" />
+    <EntityDeploy Include="DAL\LibraryContext.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>LibraryContext.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="DAL\LibraryContext.edmx.diagram">
+      <DependentUpon>LibraryContext.edmx</DependentUpon>
+    </Content>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -165,44 +167,49 @@
     <Content Include="app\controllers\mainController.js" />
     <Content Include="app\views\main.html" />
     <Content Include="app\views\register.html" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="BL\City.cs" />
     <Compile Include="BL\User.cs" />
     <Compile Include="DAL\Author.cs">
-      <DependentUpon>Library.tt</DependentUpon>
+      <DependentUpon>LibraryContext.tt</DependentUpon>
     </Compile>
     <Compile Include="DAL\Book.cs">
-      <DependentUpon>Library.tt</DependentUpon>
+      <DependentUpon>LibraryContext.tt</DependentUpon>
     </Compile>
     <Compile Include="DAL\City.cs">
-      <DependentUpon>Library.tt</DependentUpon>
+      <DependentUpon>LibraryContext.tt</DependentUpon>
     </Compile>
     <Compile Include="DAL\Genre.cs">
-      <DependentUpon>Library.tt</DependentUpon>
+      <DependentUpon>LibraryContext.tt</DependentUpon>
     </Compile>
-    <Compile Include="DAL\Library.Context.cs">
+    <Compile Include="DAL\LibraryContext.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Library.Context.tt</DependentUpon>
+      <DependentUpon>LibraryContext.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="DAL\Library.cs">
+    <Compile Include="DAL\LibraryContext.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Library.tt</DependentUpon>
+      <DependentUpon>LibraryContext.tt</DependentUpon>
     </Compile>
-    <Compile Include="DAL\Library.Designer.cs">
+    <Compile Include="DAL\LibraryContext.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Library.edmx</DependentUpon>
+      <DependentUpon>LibraryContext.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\sysdiagram.cs">
+      <DependentUpon>LibraryContext.tt</DependentUpon>
     </Compile>
     <Compile Include="DAL\User.cs">
-      <DependentUpon>Library.tt</DependentUpon>
+      <DependentUpon>LibraryContext.tt</DependentUpon>
     </Compile>
     <Compile Include="DAL\User_Books.cs">
-      <DependentUpon>Library.tt</DependentUpon>
+      <DependentUpon>LibraryContext.tt</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
